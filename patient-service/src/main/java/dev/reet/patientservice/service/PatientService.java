@@ -1,5 +1,6 @@
 package dev.reet.patientservice.service;
 
+import dev.reet.patientservice.dto.PatientRequestDTO;
 import dev.reet.patientservice.dto.PatientResponseDTO;
 import dev.reet.patientservice.mapper.PatientMapper;
 import dev.reet.patientservice.model.Patient;
@@ -18,11 +19,11 @@ public class PatientService {
 
     public List<PatientResponseDTO> getPatients(){
         List<Patient> patients = patientRepository.findAll();
-
-        // List<PatientResponseDTO> patientResponseDTOs = patients.stream()
-        //         .map(patient -> PatientMapper.toDTO(patient)).toList();
-        // return patientResponseDTOs;
-
         return patients.stream().map(PatientMapper::toDTO).toList();
+    }
+
+    public PatientResponseDTO createPatient(PatientRequestDTO patientRequestDTO){
+        Patient newPatient = patientRepository.save(PatientMapper.toModel((patientRequestDTO)));
+        return PatientMapper.toDTO(newPatient);
     }
 }
