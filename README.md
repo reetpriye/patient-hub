@@ -1,11 +1,11 @@
-# HealthSync  
+# PatientHub  
 *A scalable microservices-based healthcare platform built with Java, Spring Boot, gRPC, Kafka, and PostgreSQL.*
 
 ---
 
 ## 🚀 Overview
 
-**HealthSync** is a modular microservices architecture built with Java and Spring Boot that simulates a real-world healthcare application. It comprises independent, decoupled services such as authentication, patient management, billing, analytics, and notifications. Communication is handled via REST, gRPC, and Apache Kafka, ensuring high scalability and loose coupling.
+**PatientHub** is a modular microservices architecture built with Java and Spring Boot that simulates a real-world healthcare application. It comprises independent, decoupled services such as authentication, patient management, billing, analytics, and notifications. Communication is handled via REST, gRPC, and Apache Kafka, ensuring high scalability and loose coupling.
 
 This backend system is built with extensibility in mind, and a frontend integration layer is planned for full-stack implementation.
 
